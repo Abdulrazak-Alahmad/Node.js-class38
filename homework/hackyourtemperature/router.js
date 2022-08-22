@@ -22,7 +22,7 @@ router.post('/weather', async (req, res) => {
     res.send({ weatherText: `${cityName} ${data.main.temp}` })
   }
   catch (error) {
-    res.status(400).json(`${cityName} is not found!`)
+    res.status(404).json(`${cityName} is not found!`)
   }
 })
 
